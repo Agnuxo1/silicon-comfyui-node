@@ -2,6 +2,10 @@
 
 A ComfyUI custom node that embeds and verifies cryptographic watermarks in images using **SiliconSignature** technology. It uses LSB (Least Significant Bit) steganography combined with Reed-Solomon error correction to create tamper-resistant image signatures.
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> The ComfyUI nodes place watermark embedding and extraction inside a reusable image-processing graph, reducing repeated file handling between separate tools. They reuse dependencies already supplied by ComfyUI and check image capacity before embedding. The <a href="#nodes">documented node interface</a> supports workflow integration, with the stated lossless-format boundary determining where watermark preservation can be expected.</sub>
+<!-- impact-note:end -->
+
 ## Features
 
 - **Sign Images**: Embed a cryptographic watermark with SHA-256 Proof-of-Work nonce
